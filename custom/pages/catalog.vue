@@ -11,7 +11,7 @@
         Filter (Category)
       </div>
       <div class="col-span-4 md:col-span-2">
-        Filter (Price)
+        Filter (Price) €
       </div>
       <div class="col-span-8">
         <section class="grid grid-cols-6 gap-3">
