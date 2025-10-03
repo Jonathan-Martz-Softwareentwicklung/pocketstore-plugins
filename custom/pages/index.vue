@@ -8,58 +8,18 @@
           In Zukunft kommen auch custom plugins von anderen Herstellern.
         </p>
       </div>
-      <div class="col-span-6 md:col-span-3">
+      <div v-for="plugin in plugins" class="col-span-6 md:col-span-3">
         <div class="hero bg-gray-300 py-12">
           <div class="hero-content text-center">
             <div class="max-w-md">
-              <h1 class="text-5xl font-bold">Hello there</h1>
+              <h1 class="text-3xl font-bold">{{plugin.name}}</h1>
               <p class="py-6">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                quasi. In deleniti eaque aut repudiandae et a id nisi.
+                {{plugin.description}}
               </p>
-              <button class="btn btn-primary">Get Started</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-span-6 md:col-span-3">
-        <div class="hero bg-gray-300 py-12">
-          <div class="hero-content text-center">
-            <div class="max-w-md">
-              <h1 class="text-5xl font-bold">Hello there</h1>
-              <p class="py-6">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                quasi. In deleniti eaque aut repudiandae et a id nisi.
-              </p>
-              <button class="btn btn-primary">Get Started</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-span-6 md:col-span-3">
-        <div class="hero bg-gray-300 py-12">
-          <div class="hero-content text-center">
-            <div class="max-w-md">
-              <h1 class="text-5xl font-bold">Hello there</h1>
-              <p class="py-6">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                quasi. In deleniti eaque aut repudiandae et a id nisi.
-              </p>
-              <button class="btn btn-primary">Get Started</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-span-6 md:col-span-3">
-        <div class="hero bg-gray-300 py-12">
-          <div class="hero-content text-center">
-            <div class="max-w-md">
-              <h1 class="text-5xl font-bold">Hello there</h1>
-              <p class="py-6">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                quasi. In deleniti eaque aut repudiandae et a id nisi.
-              </p>
-              <button class="btn btn-primary">Get Started</button>
+              <section class="actions space-x-3">
+                <button class="btn btn-primary">View</button>
+                <button class="btn btn-primary">Code</button>
+              </section>
             </div>
           </div>
         </div>
@@ -68,4 +28,14 @@
   </section>
 </template>
 <script setup lang="ts">
+const plugins = ref([]);
+
+const load = async () =>{
+  let response = await fetch('https://download.pocketstore.io/modules');
+  plugins.value = await response.json();
+}
+
+onMounted(()=>{
+  load()
+});
 </script>
