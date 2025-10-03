@@ -1,7 +1,7 @@
 @plugin "daisyui/theme" {
     name: "light";
     default: true;
-    --color-primary: red;
+    --color-primary: green;
     --color-secondary: red;
     --color-secondary-content: white;
     --color-neutral: white;
