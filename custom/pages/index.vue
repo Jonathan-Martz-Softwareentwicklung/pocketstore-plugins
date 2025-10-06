@@ -33,6 +33,7 @@ const plugins = ref([]);
 const load = async () =>{
   let response = await fetch('https://download.pocketstore.io/modules');
   plugins.value = await response.json();
+  plugins.value.sort((a, b) => a.name.localeCompare(b.name))
 }
 
 onMounted(()=>{
