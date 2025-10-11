@@ -4,6 +4,8 @@
     --color-primary: green;
     --color-secondary: red;
     --color-secondary-content: white;
+    --color-info: #1f6fed;
+    --color-info-content: white;
     --color-neutral: white;
     --color-neutral-content: black;
 }

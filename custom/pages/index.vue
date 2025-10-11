@@ -8,35 +8,24 @@
           In Zukunft kommen auch custom plugins von anderen Herstellern.
         </p>
       </div>
-      <div v-for="plugin in plugins" class="col-span-6 md:col-span-3">
-        <div class="hero bg-gray-300 py-12">
-          <div class="hero-content text-center">
-            <div class="max-w-md">
-              <h1 class="text-3xl font-bold">{{plugin.name}}</h1>
-              <p class="py-6">
-                {{plugin.description}}
-              </p>
-              <section class="actions space-x-3">
-                <button class="btn btn-primary">View</button>
-                <button class="btn btn-primary">Code</button>
-              </section>
-            </div>
-          </div>
-        </div>
+      <div v-for="(plugin,index) in plugins" class="col-span-6 md:col-span-3">
+        <HeroProduct :plugin="plugin" :index="index" />
       </div>
     </section>
   </section>
 </template>
 <script setup lang="ts">
+import HeroProduct from "@/components/HeroProduct.vue";
+
 const plugins = ref([]);
 
-const load = async () =>{
-  let response = await fetch('https://download.pocketstore.io/modules');
+const load = async () => {
+  let response = await fetch('https://download.pocketstore.io/plugins');
   plugins.value = await response.json();
   plugins.value.sort((a, b) => a.name.localeCompare(b.name))
 }
 
-onMounted(()=>{
+onMounted(() => {
   load()
 });
 </script>

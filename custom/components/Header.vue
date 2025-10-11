@@ -16,11 +16,23 @@
     </section>
     <section v-if="open" class="navigation mt-3 mobile lg:hidden bg-white rounded-xl px-3 py-3">
       <section class="grid grid-cols-6 gap-3">
-        <div class="col-span-3">
-          <a href="/de" class="btn btn-block btn-primary">Startseite</a>
+        <div class="col-span-3 md:col-span-2">
+          <a href="/de" class="btn btn-block btn-primary">
+            <font-awesome-icon :icon="['fas', 'home']"/>
+            <span>Startseite</span>
+          </a>
         </div>
-        <div class="col-span-3">
-          <a href="/de/catalog" class="btn btn-block btn-primary">Katalog</a>
+        <div class="col-span-3 md:col-span-2">
+          <a href="/de/catalog" class="btn btn-block btn-primary">
+            <font-awesome-icon :icon="['fas', 'magnifying-glass']"/>
+            <span>Suche</span>
+          </a>
+        </div>
+        <div class="col-span-3 md:col-span-2">
+          <a href="/de/catalog" class="btn btn-block btn-primary">
+            <font-awesome-icon :icon="['fas', 'list']"/>
+            <span>Katalog</span>
+          </a>
         </div>
       </section>
     </section>

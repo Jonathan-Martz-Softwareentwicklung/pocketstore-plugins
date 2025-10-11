@@ -2,10 +2,10 @@
   "domains": {
     "nuxt": "plugins.pocketstore.io",
     "download": "download.pocketstore.io",
-    "pocketbase": "admin.pocketstore.io"
+    "pocketbase": "admin.plugins.pocketstore.io"
   },
   "maintance": {
-    "enabled": true,
+    "enabled": false,
     "until": "12.10.2026 12:12:12"
   },
   "emails": {
