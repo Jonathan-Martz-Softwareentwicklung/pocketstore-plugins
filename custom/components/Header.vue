@@ -1,5 +1,5 @@
 <template>
-  <div class="py-3 mx-auto max-w-6xl">
+  <div class="py-3 mx-3 lg:mx-auto max-w-6xl">
     <section class="bg-red-400 rounded-xl px-3 py-3 flex justify-between">
       <section class="logo">
         <a href="/" class="font-bold">Pocketstore.io - Plugins</a>
@@ -26,6 +26,12 @@
           <a href="/de/catalog" class="btn btn-block btn-primary">
             <font-awesome-icon :icon="['fas', 'magnifying-glass']"/>
             <span>Suche</span>
+          </a>
+        </div>
+        <div class="col-span-3 md:col-span-2">
+          <a href="/de/blog" class="btn btn-block btn-primary">
+            <font-awesome-icon :icon="['fas', 'rss']"/>
+            <span>Blog</span>
           </a>
         </div>
         <div class="col-span-3 md:col-span-2">
