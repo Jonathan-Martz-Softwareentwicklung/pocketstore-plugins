@@ -22,7 +22,7 @@
             <span>Version</span>
             <select class="select w-full">
               <option value="latest">Latest</option>
-              <option v-for="version in versions" :value="version">{{ version }}</option>
+              <option v-for="version in plugin.versions" :value="version">{{ version }}</option>
             </select>
           </label>
         </p>
@@ -86,19 +86,18 @@
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 import {useRoute} from 'vue-router'
 import {usePocketBase} from "@/util/pocketbase";
-import PluginCard from "../../components/PluginCard.vue";
+import PluginCard from "@/components/PluginCard.vue";
 
 const route = useRoute();
 const pb = usePocketBase();
 
-const name = computed(() => {
-  return route.params.name.replace('.html', '')
-});
-
 const plugin = ref({});
-const versions = ref(['v0.0.1', 'v0.0.1.1']);
 const blocks = ref([]);
 const related = ref([]);
+
+const name = computed(()=>{
+  return route.params.name.replace('.html', '');
+});
 
 const load = async () => {
   let response = await fetch('https://download.pocketstore.io/plugin/' + name.value);

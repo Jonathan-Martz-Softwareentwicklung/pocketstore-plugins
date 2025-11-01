@@ -1,5 +1,5 @@
 <template>
-  <div class="py-3 px-3 mx-auto max-w-6xl">
+  <div class="py-3 mx-auto max-w-6xl">
     <section class="bg-red-400 rounded-xl px-3 py-3 flex justify-between">
       <section class="logo">
         <a href="/" class="font-bold">Pocketstore.io - Plugins</a>
