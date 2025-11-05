@@ -1,1 +1,7 @@
-[]
+[
+  {
+    "name": "simple-blog",
+    "vendor": "pocketstore-io",
+    "version": "latest"
+  }
+]
