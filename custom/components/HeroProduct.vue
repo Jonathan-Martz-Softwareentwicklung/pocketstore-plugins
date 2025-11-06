@@ -14,8 +14,12 @@
           {{ props.plugin.description }}
         </p>
         <section class="actions space-x-3">
-          <a :href="'/de/plugin/'+props.plugin.name+'.html'" class="btn btn-primary">View</a>
-          <a target="_blank" :href="'https://'+plugin.host+'/'+plugin.vendor+'/plugin-'+plugin.name" class="btn btn-primary">Code</a>
+          <a :href="'/de/plugin/'+props.plugin.name+'.html'" class="btn btn-primary">
+            {{$t('btn.view')}}
+          </a>
+          <a target="_blank" :href="'https://'+plugin.host+'/'+plugin.vendor+'/plugin-'+plugin.name" class="btn btn-primary">
+            {{$t('btn.code')}}
+          </a>
         </section>
       </div>
     </div>
