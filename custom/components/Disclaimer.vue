@@ -1,8 +1,8 @@
 <template>
-  <section class="alert alert-info flex mb-3 xl:mx-auto">
+  <section class="alert alert-success flex mb-3 xl:mx-auto">
     <Fa :icon="faInfoCircle" class="text-white" />
     <p class="text-sm font-bold w-full text-center text-white">
-      Dies ist die Storefront für Pocketstore.io - Plugins
+      {{$t('general.note')}}
     </p>
     <Fa :icon="faInfoCircle" class="text-white" />
   </section>
