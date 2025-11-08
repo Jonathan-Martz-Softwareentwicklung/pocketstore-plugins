@@ -100,7 +100,8 @@
           </button>
           <!-- Login / Avatar -->
           <div class="hidden md:block">
-            <button class="btn btn-success btn-sm">Login</button>
+            <button v-if="!pb.authStore.isValid" @click="navigateTo('/customer/login')" class="btn btn-success btn-sm">Login</button>
+            <button v-else @click="navigateTo('/customer/logout')" class="btn btn-warning btn-sm">Logout</button>
           </div>
           <button @click="mobileOpen = !mobileOpen" class="md:hidden p-2 btn btn-neutral btn-sm">
             <font-awesome-icon v-if="!mobileOpen" :icon="['fas', 'bars']" class="text-xl"/>
@@ -108,6 +109,30 @@
           </button>
         </div>
       </div>
+      <section v-if="mobileOpen" class="md:hidden mb-2 bg-white px-3 py-3">
+        <section class="grid grid-cols-6 gap-3">
+          <div class="col-span-3">
+            <button @click="navigateTo('/');mobileOpen = false" class="btn btn-block">
+              Startseite
+            </button>
+          </div>
+          <div class="col-span-3">
+            <button @click="navigateTo('/blog');mobileOpen = false" class="btn btn-block">
+              Blog
+            </button>
+          </div>
+          <div class="col-span-3">
+            <button @click="navigateTo('/catalog');mobileOpen = false" class="btn btn-block">
+              Katalog
+            </button>
+          </div>
+          <div class="col-span-3">
+            <button @click="navigateTo('/search');mobileOpen = false" class="btn btn-block">
+              Suche
+            </button>
+          </div>
+        </section>
+      </section>
     </div>
   </header>
 
