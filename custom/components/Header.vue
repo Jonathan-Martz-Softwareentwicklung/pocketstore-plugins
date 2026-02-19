@@ -156,7 +156,7 @@
 <script setup>
 import {ref} from 'vue'
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-import {usePocketBase} from "~/util/pocketbase.ts";
+import {usePocketBase} from "~/utils/pocketbase.ts";
 import {useLocalStorage} from '@vueuse/core'
 import LanguageSwitcher from "./LanguageSwitcher.vue";
 
