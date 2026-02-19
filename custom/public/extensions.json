@@ -1,5 +1,13 @@
 {
-  "store": [
-    "github.com/pocketcms-io/extension-store"
-  ]
+  "store": {
+    "pocketstore-io/homepage-demo": 100,
+    "pocketstore-io/catalog-plugin": 100,
+    "pocketstore-io/catalog-product": 100,
+    "pocketstore-io/checkout": 100,
+    "pocketstore-io/customer": 100,
+    "pocketstore-io/admin-dashboard": 100,
+    "pocketstore-io/product-details": 100,
+    "pocketstore-io/product-reviews": 100,
+    "pocketstore-io/product-tabs": 100
+  }
 }
