@@ -1,6 +1,5 @@
 {
   "store": {
-    "pocketstore-io/homepage-demo": 100,
     "pocketstore-io/catalog-plugin": 100,
     "pocketstore-io/catalog-product": 100,
     "pocketstore-io/checkout": 100,
